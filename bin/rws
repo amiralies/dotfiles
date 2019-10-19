@@ -1,0 +1,8 @@
+#!/bin/bash
+if [ $# -eq 0  ]; then
+	renamews
+else
+	i3-msg rename workspace "$1" to "$2"
+fi
+
+

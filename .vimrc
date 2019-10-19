@@ -1,0 +1,193 @@
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'neoclide/coc.nvim'
+Plugin 'dracula/vim'
+Plugin 'sickill/vim-monokai'
+Plugin 'tpope/vim-sleuth'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'scrooloose/nerdtree'
+Plugin 'pangloss/vim-javascript'
+Plugin 'MaxMEllon/vim-jsx-pretty'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'tpope/vim-repeat'
+Plugin 'junegunn/fzf.vim'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'elixir-editors/vim-elixir'
+Plugin 'mhinz/vim-mix-format'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'Yggdroot/indentLine'
+Plugin 'junegunn/limelight.vim'
+Plugin 'junegunn/goyo.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-git'
+Plugin 'tpope/vim-surround'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'HerringtonDarkholme/yats.vim'
+Plugin 'kana/vim-textobj-user'
+Plugin 'andyl/vim-textobj-elixir'
+Plugin 'jparise/vim-graphql'
+Plugin 'reasonml-editor/vim-reason-plus'
+
+call vundle#end()
+filetype plugin indent on
+
+set number
+set ru
+
+syntax on
+color dracula
+set tgc
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+"Leader
+let mapleader=","
+
+"default indent
+set ts=4
+set sw=4
+
+"Smart case search
+set ignorecase
+set smartcase
+
+set laststatus=2
+
+
+"Custom keymaps
+map <silent> <C-k><C-b> :NERDTreeToggle<CR>
+imap jj <Esc>
+
+" air-line
+let g:airline_powerline_fonts = 1
+let g:airline_theme='luna'
+
+" Scala specific
+au BufRead,BufNewFile *.sbt set filetype=scala
+
+" jump defintion
+nmap <silent> gd <Plug>(coc-definition)
+
+" Tab and shift tab for completion navigation
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" FZF
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --glob "!.git/*"'
+nnoremap <C-p> :FZF<CR>
+nnoremap <C-S-f> :Ag<Space>
+nnoremap <C-b> :Buffers<CR>
+
+" Splits
+set splitbelow
+set splitright
+
+" split whole vim
+nmap <silent> <leader>sfh :topleft vnew<CR>
+nmap <silent> <leader>sfl :botright vnew<CR>
+nmap <silent> <leader>sfk :topleft new<CR>
+nmap <silent> <leader>sfj :botright new<CR>
+
+" split window(split)
+nmap <silent> <leader>sh :leftabove vnew<CR>
+nmap <silent> <leader>sl :rightbelow vnew<CR>
+nmap <silent> <leader>sk :leftabove new<CR>
+nmap <silent> <leader>sj :rightbelow new<CR>
+
+nmap <C-h> <C-w><C-h>
+nmap <C-j> <C-w><C-j>
+nmap <C-k> <C-w><C-k>
+nmap <C-l> <C-w><C-l>
+
+map <Esc>[1;5A <C-Up>
+map <Esc>[1;5D <C-Left>
+map <Esc>[1;5B <C-Down>
+map <Esc>[1;5C <C-Right>
+
+nnoremap <C-Up> <C-W>-<C-W>-
+nnoremap <C-Down> <C-W>+<C-W>+
+nnoremap <C-Right> <C-W>><C-W>>
+nnoremap <C-Left> <C-W><<C-W><
+
+" hover
+nnoremap <silent> gh :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" Gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" List diagnostics
+nnoremap <leader>d :CocList diagnostics<cr>
+
+" Rnemae word under cursor
+nmap <leader>rn <Plug>(coc-rename)
+
+" folding
+"set foldmethod=syntax
+"set foldlevelstart=20
+
+" highlight current line
+set cul
+
+" indent guides
+let g:indentLine_char='❘'
+let g:indentLine_enabled = 1
+let g:indentLine_leadingSpaceChar = '·'
+let g:indentLine_leadingSpaceEnabled = 1
+
+set list
+" space is needed at the end
+set lcs=tab:\🡺\ ,trail:~
+
+" External vim config
+set exrc
+set secure
+
+"" Js specific
+let g:javascript_plugin_flow = 1
+
+" fomratter
+vmap <silent> <leader>f <Plug>(coc-format-selected)
+nmap <silent> <leader>f :call CocAction('format')<CR>
+
+" jsonc comments
+autocmd FileType json syntax match Comment +\/\/.\+$+
+
+" limelight
+nmap <Leader>l :Limelight!!<CR>
+
+" nohl
+nmap <silent> \ :nohl<cr>
+
+" Coc commands
+nmap <C-k><C-p> :CocList commands<cr>
+
+" Fix cursor shapes
+let &t_SI = "\<Esc>[6 q"
+let &t_SR = "\<Esc>[4 q"
+let &t_EI = "\<Esc>[2 q"
+
+let g:indentLine_fileTypeExluce=['help', 'nerdtree']
+autocmd FileType help,nerdtree IndentLinesToggle
+autocmd FileType help,nerdtree LeadingSpaceToggle
+
+set encoding=UTF-8
+set hlsearch
+autocmd BufNewFile,BufRead *.flow setfiletype javascript
+

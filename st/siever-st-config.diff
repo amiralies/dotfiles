@@ -1,0 +1,15 @@
+diff --git a/config.def.h b/config.def.h
+index 482901e..dc487c8 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -5,8 +5,8 @@
+  *
+  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
+  */
+-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+-static int borderpx = 2;
++static char *font = "Monaco:pixelsize=14:antialias=true:autohint=true";
++static int borderpx = 0;
+ 
+ /*
+  * What program is execed by st depends of these precedence rules:

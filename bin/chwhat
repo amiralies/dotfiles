@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ "$1" == "-h"  ]; then
+	stat -c %A $2
+	exit 0
+fi
+if [ "$2" == "-h" ]; then
+	stat -c %A $1
+	exit 0
+fi
+stat -c %a $1
+

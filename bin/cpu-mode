@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ "$1" == "show" ]; then
+	cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+	exit 0
+elif [ "$1" == "performance" ]; then
+	sudo cpupower frequency-set --governor performance
+	exit 0
+elif [ "$1" == "powersave" ]; then
+	sudo cpupower frequency-set --governor powersave
+	exit 0
+fi
+
+echo "Wtf are you asking for?"
+exit 1
+

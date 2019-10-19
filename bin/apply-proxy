@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "Applying http proxy $1:$2"
+
+if [ ! -z $3 ]
+then
+	echo "No Proxy: $3"
+	export no_proxy="$3"
+fi
+
+export http_proxy="http://$1:$2"
+export https_proxy=$http_proxy
+export HTTP_PROXY=$http_proxy
+export HTTPS_PROXY=$http_proxy
+export JAVA_OPTS="$JAVA_OPTS -Dhttps.proxyHost=$1 -Dhttps.proxyPort=$2 -Dhttp.proxyHost=$1 -Dhttp.proxyPort=$2"
+

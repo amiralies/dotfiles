@@ -1,0 +1,10 @@
+#!/bin/bash
+
+rws 1 1:www
+rws 2 2:code
+rws 3 3:mon
+rws 4 4:tg
+rws 8 8:emu
+rws 9 9:spt
+rws 10 10:chat
+

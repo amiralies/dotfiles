@@ -1,0 +1,38 @@
+[user]
+	email = esmailiamirali@gmail.com
+	name = Amirali Esmaeili
+[core]
+	editor = vim 
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[diff]
+	tool = vimdiff
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+
+[alias]
+	adog = log --all --decorate --oneline --graph
+	dog = log --decorate --oneline --graph
+	cnv = commit --no-verify
+	dt = difftool
+	dtcode = difftool --tool vscode
+	dty = difftool -y
+	b = ! git branch | grep '*' | cut -d ' ' -f2
+	rawdiff = !git --no-pager diff --no-color
+	co = checkout
+
+[merge]
+	tool = vimdiff
+[color]
+	ui = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = yellow
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse

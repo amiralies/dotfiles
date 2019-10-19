@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Set up Node Version Manager
+unset npm_config_prefix
+export NVM_DIR="$HOME/.nvm"
+export NVM_SOURCE="/usr/share/nvm"
+[ -s "$NVM_SOURCE/nvm.sh"  ] && . "$NVM_SOURCE/nvm.sh" --no-use
+source /usr/share/nvm/bash_completion
+

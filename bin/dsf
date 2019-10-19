@@ -1,0 +1,4 @@
+#!/bin/bash
+
+git diff --no-index "$@"
+
