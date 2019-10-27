@@ -163,7 +163,7 @@ set secure
 let g:javascript_plugin_flow = 1
 
 " fomratter
-vmap <silent> <leader>f <Plug>(coc-format-selected)
+vmap <silent> <leader>f :call CocAction('formatSelected', visualmode())<CR>
 nmap <silent> <leader>f :call CocAction('format')<CR>
 
 " jsonc comments
