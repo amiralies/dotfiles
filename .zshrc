@@ -193,3 +193,5 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 #FINAL_TIME_SIEVER=$(($(date +%s%N)/1000000))
 #echo $(($FINAL_TIME_SIEVER - $INIT_TIME_SIEVER))
 
+# opam configuration
+test -r ~/.opam/opam-init/init.zsh && . ~/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
