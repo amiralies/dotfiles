@@ -1,41 +1,38 @@
 set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'neoclide/coc.nvim'
-Plugin 'dracula/vim'
-Plugin 'sickill/vim-monokai'
-Plugin 'tpope/vim-sleuth'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'scrooloose/nerdtree'
-Plugin 'pangloss/vim-javascript'
-Plugin 'MaxMEllon/vim-jsx-pretty'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'tpope/vim-repeat'
-Plugin 'junegunn/fzf.vim'
-Plugin 'derekwyatt/vim-scala'
-Plugin 'elixir-editors/vim-elixir'
-Plugin 'mhinz/vim-mix-format'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'Yggdroot/indentLine'
-Plugin 'junegunn/limelight.vim'
-Plugin 'junegunn/goyo.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-git'
-Plugin 'tpope/vim-surround'
-Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'HerringtonDarkholme/yats.vim'
-Plugin 'kana/vim-textobj-user'
-Plugin 'andyl/vim-textobj-elixir'
-Plugin 'jparise/vim-graphql'
-Plugin 'reasonml-editor/vim-reason-plus'
+call plug#begin()
 
-call vundle#end()
-filetype plugin indent on
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'dracula/vim'
+Plug 'sickill/vim-monokai'
+Plug 'tpope/vim-sleuth'
+Plug 'jiangmiao/auto-pairs'
+Plug 'scrooloose/nerdtree'
+Plug 'pangloss/vim-javascript'
+Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-repeat'
+Plug 'junegunn/fzf.vim'
+Plug 'derekwyatt/vim-scala'
+Plug 'elixir-editors/vim-elixir'
+Plug 'mhinz/vim-mix-format'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'Yggdroot/indentLine'
+Plug 'junegunn/limelight.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-git'
+Plug 'tpope/vim-surround'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'kana/vim-textobj-user'
+Plug 'andyl/vim-textobj-elixir'
+Plug 'jparise/vim-graphql'
+Plug 'reasonml-editor/vim-reason-plus'
+
+call plug#end()
 
 set number
 set ru
