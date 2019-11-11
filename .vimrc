@@ -186,5 +186,4 @@ autocmd FileType help,nerdtree LeadingSpaceToggle
 
 set encoding=UTF-8
 set hlsearch
-autocmd BufNewFile,BufRead *.flow setfiletype javascript
 
