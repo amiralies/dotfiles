@@ -132,6 +132,7 @@ alias e=exit
 alias c=clear
 alias dic=sdcv
 alias turnoff="systemctl poweroff"
+alias t=touch
 
 # Vi mode
 set -o vi
