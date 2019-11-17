@@ -172,10 +172,7 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_DUPS
 
 # Gem
-PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
-export GEM_PATH=$HOME/gems:/usr/local/lib/ruby/gems/1.6/
-export GEM_HOME=$HOME/.gem
-export RB_USER_INSTALL='true'
+PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
 
 # ipinfo
 alias ipinfo="curl ipinfo.io"
