@@ -114,14 +114,7 @@ nnoremap <C-Right> <C-W>><C-W>>
 nnoremap <C-Left> <C-W><<C-W><
 
 " hover
-nnoremap <silent> gh :call <SID>show_documentation()<CR>
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
+nnoremap <silent> gh :call CocAction('doHover')<cr>
 
 " Gotos
 nmap <silent> gd <Plug>(coc-definition)
