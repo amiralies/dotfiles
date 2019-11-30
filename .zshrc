@@ -122,6 +122,7 @@ alias emu=~/Android/Sdk/emulator/emulator
 alias azizam=sudo
 alias v=vim
 alias nv=nvim
+alias v8=~/.jsvu/v8
 alias open=xdg-open
 alias cpwd="pwd | xclip -selection clipboard" 
 alias cpcb="xclip -selection clipboard" 
