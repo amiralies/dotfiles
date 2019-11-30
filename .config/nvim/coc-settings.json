@@ -12,5 +12,6 @@
       "filetypes": ["c", "cpp", "objc", "objcpp"]
     }
   },
-  "suggest.echodocSupport": true
+  "suggest.echodocSupport": true,
+  "reason_language_server.show_module_path_on_hover": false
 }
