@@ -1,4 +1,5 @@
 android-studio
+aseprite
 bloop
 borna-fonts
 breeze-hacked-cursor-theme
@@ -14,6 +15,7 @@ exercism-bin
 fiddler
 fsharp
 genymotion
+gplaycli
 insomnia
 jcal-git
 k3rmit-git
@@ -32,6 +34,7 @@ mongodb-compass
 mongodb-tools-bin
 monodevelop-stable
 msbuild-stable
+ncurses5-compat-libs
 nvm
 obfs4proxy
 openrazer-daemon
@@ -40,8 +43,10 @@ openrazer-meta
 polybar
 polychromatic
 postman
+python-gpapi
 python-notify2
 python-openrazer
+python-pyaxmlparser
 razergenie-git
 rocketchat-desktop
 sconsify
