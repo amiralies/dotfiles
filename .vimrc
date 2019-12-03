@@ -98,11 +98,6 @@ nmap <silent> <leader>sl :rightbelow vnew<CR>
 nmap <silent> <leader>sk :leftabove new<CR>
 nmap <silent> <leader>sj :rightbelow new<CR>
 
-nmap <C-h> <C-w><C-h>
-nmap <C-j> <C-w><C-j>
-nmap <C-k> <C-w><C-k>
-nmap <C-l> <C-w><C-l>
-
 map <Esc>[1;5A <C-Up>
 map <Esc>[1;5D <C-Left>
 map <Esc>[1;5B <C-Down>
