@@ -31,6 +31,7 @@ Plug 'kana/vim-textobj-user'
 Plug 'andyl/vim-textobj-elixir'
 Plug 'jparise/vim-graphql'
 Plug 'reasonml-editor/vim-reason-plus'
+Plug 'ElmCast/elm-vim'
 
 call plug#end()
 
