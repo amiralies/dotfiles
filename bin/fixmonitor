@@ -1,2 +1,2 @@
 #!/bin/sh
-sleep 4;xrandr --output eDP1 --auto;sh ~/.config/polybar/launch.sh;feh --bg-scale ~/Pictures/Wallpapers/current.jpg --bg-scale ~/Pictures/Wallpapers/current.jpg
+sleep 4;xrandr --output eDP1 --auto;sh ~/.config/polybar/launch.sh;feh --bg-scale ~/Pictures/Wallpapers/current.jpg --bg-scale ~/Pictures/Wallpapers/current.jpg --bg-scale ~/Pictures/Wallpapers/current.jpg

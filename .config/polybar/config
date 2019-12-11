@@ -33,6 +33,36 @@ modules-left = i3
 modules-right = filesystem xbacklight pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
 
 
+
+[bar/sieverbardp1]
+monitor = ${env:MONITOR:} 
+width = 100%
+height = 3%
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+font-3 = Monaco:pixelsize=8;1
+font-0 = "Font Awesome 5 Free:style=Regular:pixelsize=8;1"
+font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=8;1"
+font-2 = "Font Awesome 5 Brands:pixelsize=10;1"
+font-4 = siji:pixelsize=10;1
+
+;tray-position = right
+
+line-size = 3
+line-color = #F00
+
+padding-right = 1
+module-margin-left = 2
+
+modules-left = i3
+modules-center = mpris
+modules-right = filesystem xbacklight pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
 [bar/sieverbar]
 monitor = ${env:MONITOR:} 
 width = 100%

@@ -8,10 +8,16 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 if type "xrandr"; then
   for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-    if [ "$m" = "eDP-1" ]; then
+    if [ "$m" = "eDP1" ]; then
       MONITOR=$m polybar --reload sieverbaredp1 &
-    else
-   MONITOR=$m polybar --reload sieverbar &
+    fi
+
+    if [ "$m" = "DP1" ]; then
+       MONITOR=$m polybar --reload sieverbardp1 &
+    fi
+
+    if [ "$m" = "HDMI1" ]; then
+        MONITOR=$m polybar --reload sieverbar &
      fi
   done
 fi
