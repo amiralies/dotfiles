@@ -2,7 +2,8 @@
 if [ $# -eq 0  ]; then
 	renamews
 else
-	i3-msg rename workspace "$1" to "$2"
+	pgrep -x i3 && i3-msg rename workspace "$1" to "$2"
+	pgrep -x sway && swaymsg rename workspace "$1" to "$2"
 fi
 
 
