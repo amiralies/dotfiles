@@ -1,6 +1,7 @@
 ack
 acpi
 acpid
+acpilight
 adobe-source-code-pro-fonts
 alacritty
 alsa-utils
@@ -27,6 +28,7 @@ blueman
 bluez-utils
 breeze
 breeze-gtk
+brightnessctl
 bucklespring
 bwm-ng
 bzip2
@@ -111,6 +113,7 @@ go
 gparted
 gpick
 grep
+grim
 groff
 grub
 grub-customizer
@@ -188,6 +191,7 @@ lynx
 m4
 maim
 make
+mako
 man-db
 man-pages
 mariadb
@@ -198,6 +202,7 @@ mesa-demos
 midori
 milou
 minikube
+mitmproxy
 mopidy
 mosh
 most
@@ -288,20 +293,24 @@ screenfetch
 scrot
 sdcv
 sddm-kcm
+seahorse
 sed
 shadow
 shadowsocks-libev
 sl
+slurp
 smartmontools
 sshuttle
 steam
 sudo
 surf
+sway
 sysfsutils
 systemd
 systemd-sysvcompat
 systemsettings
 tar
+tcc
 telegram-desktop
 terminator
 texinfo
@@ -346,10 +355,13 @@ virtualbox-host-modules-arch
 vlc
 vulkan-intel
 watchman
+waybar
 wget
 which
 whois
+wine
 wireshark-qt
+wl-clipboard
 wpa_supplicant
 wxgtk2
 xautolock
@@ -357,8 +369,6 @@ xclip
 xdg-desktop-portal-kde
 xdotool
 xf86-video-intel
-xf86-video-nouveau
-xf86-video-vesa
 xfsprogs
 xorg-bdftopcf
 xorg-docs
@@ -378,7 +388,6 @@ xorg-server-xwayland
 xorg-sessreg
 xorg-smproxy
 xorg-x11perf
-xorg-xbacklight
 xorg-xcmsdb
 xorg-xcursorgen
 xorg-xdpyinfo
