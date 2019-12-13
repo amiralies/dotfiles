@@ -1,0 +1,140 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: Monaco, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  color: #dfdfdf;
+  min-height: 0;
+}
+
+window#waybar {
+  background-color: #222222;
+  color: #dfdfdf;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+window#waybar.termite {
+  background-color: #3f3f3f;
+}
+
+window#waybar.chromium {
+  background-color: #000000;
+  border: none;
+}
+
+#workspaces button {
+  padding: 0 7px;
+  background-color: transparent;
+  border-bottom: 3px solid transparent;
+}
+
+#workspaces button:hover {
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: inherit;
+  border-bottom: 3px solid #1793d1;
+}
+
+#workspaces button.focused {
+  background-color: #444;
+  border-bottom: 3px solid #1793d1;
+}
+
+#workspaces button.urgent {
+  background-color: #eb4d4b;
+}
+
+#mode {
+  background-color: #64727d;
+  border-bottom: 3px solid #ffffff;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-spotify,
+#mode {
+  padding: 0 5px;
+  margin: 0 4px;
+  color: #dfdfdf;
+}
+
+#clock {
+  border-bottom: 3px solid #7e66b9;
+}
+
+#battery {
+  border-bottom: 3px solid #ffb52a;
+}
+
+#battery.charging {
+  border-bottom: 3px solid #44bd32;
+}
+
+@keyframes blink {
+  to {
+    color: #de0037;
+    border-bottom: 3px solid #de0037;
+  }
+}
+
+#battery.critical:not(.charging) {
+  color: #dfdfdf;
+  border-bottom: 3px solid #ffb52a;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+label:focus {
+  background-color: #000000;
+}
+
+#cpu {
+  border-bottom: 3px solid #f90000;
+}
+
+#memory {
+  border-bottom: 3px solid #4bffdc;
+}
+
+#backlight {
+  background-color: #222;
+  border-bottom: 3px solid #f1c40f;
+}
+
+#network {
+  border-bottom: 3px solid #9f78e1;
+}
+
+#pulseaudio {
+  border-bottom: 3px solid #55aa55;
+}
+
+#pulseaudio.muted {
+  border-bottom: 3px solid #ff5555;
+}
+
+#custom-spotify {
+  /* Nothing special */
+  padding-right: 50px;
+}
+
+#temperature {
+  border-bottom: 3px solid #f50a4d;
+}
+
+#temperature.critical {
+  color: red;
+}

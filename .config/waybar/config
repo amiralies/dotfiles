@@ -1,0 +1,104 @@
+{
+  "layer": "bottom",
+  "height": 25,
+  "modules-left": ["sway/workspaces", "sway/mode"],
+  "modules-center": ["custom/spotify"],
+  "modules-right": [
+    "backlight",
+    "pulseaudio",
+    "memory",
+    "cpu",
+    "network",
+    "battery",
+    "battery#bat2",
+    "temperature",
+    "clock"
+  ],
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": false,
+    "format": "{index}:{name}",
+    "format-icons": {
+      "urgent": "",
+      "focused": "",
+      "default": ""
+    }
+  },
+  "sway/mode": {
+    "format": "<span style=\"italic\">{}</span>"
+  },
+  "clock": {
+    "format": " {:%H:%M}",
+    "tooltip-format": "{:%Y-%m-%d | %H:%M}",
+    "format-alt": " {:%Y-%m-%d}"
+  },
+  "cpu": {
+    "format": " {usage}%",
+    "tooltip": false
+  },
+  "memory": {
+    "format": " {}%"
+  },
+  "temperature": {
+    "critical-threshold": 60,
+    "format": "{temperatureC}°C {icon}",
+    "format-icons": ["", "", ""]
+  },
+  "backlight": {
+    "format": "{percent}% {icon}",
+    "format-icons": ["", ""],
+    "on-scroll-up": "xbacklight -inc 5",
+    "on-scroll-down": "xbacklight -dec 5"
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-charging": "{capacity}% ",
+    "format-plugged": "{capacity}% ",
+    "format-alt": "{time} {icon}",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "battery#bat2": {
+    "bat": "BAT2"
+  },
+  "network": {
+    "format-wifi": "  {essid} ({signalStrength}%)",
+    "format-ethernet": " {ifname}: {ipaddr}/{cidr}",
+    "format-linked": " {ifname} (No IP)",
+    "format-disconnected": "",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}% {format_source}",
+    "format-bluetooth": "{icon} {volume}%  {format_source}",
+    "format-bluetooth-muted": " {icon}  {format_source}",
+    "format-muted": " {format_source}",
+    "format-source": " {volume}%",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphones": "",
+      "handsfree": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+    "smooth-scrolling-threshold": 3
+  },
+
+  "custom/spotify": {
+    "interval": 1,
+    "return-type": "json",
+    "exec": "~/.config/waybar/modules/spotify.sh",
+    "exec-if": "pgrep -x spotify",
+    "escape": true,
+    "on-click": "playerctl play-pause"
+  }
+}
