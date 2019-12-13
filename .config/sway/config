@@ -15,7 +15,7 @@ set $term st
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
 # Output configuration
-output * bg ~/Pictures/Wallpapers/sway-current.png fill
+output * bg ~/Pictures/Wallpapers/sway-current.jpg fill
 
 # Idle config
 exec swayidle -w \
