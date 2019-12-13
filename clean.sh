@@ -19,4 +19,5 @@ rm -rf ~/.config/libinput-gestures.conf
 rm -rf ~/.config/nvim/init.vim
 rm -rf ~/.config/nvim/coc-settings.json
 rm -rf ~/.vim/coc-settings.json
-
+rm -rf ~/.config/sway
+rm -rf ~/.config/waybar
