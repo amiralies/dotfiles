@@ -305,6 +305,8 @@ steam
 sudo
 surf
 sway
+swayidle
+swaylock
 sysfsutils
 systemd
 systemd-sysvcompat
