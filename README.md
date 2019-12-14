@@ -11,6 +11,6 @@ Some of my arch linux configs
 
 # Notes
 
-Vim setup can be tricky, make sure to setup vundle correctly
+Vim setup can be tricky, make sure to setup vim-plug correctly
 
 Remember to apply needed patches(scrollback, theme) on st
