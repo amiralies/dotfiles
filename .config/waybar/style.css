@@ -46,6 +46,7 @@ window#waybar.chromium {
 
 #workspaces button.urgent {
   background-color: #eb4d4b;
+  border-bottom: 3px solid #eb4d4b;
 }
 
 #mode {
@@ -61,7 +62,7 @@ window#waybar.chromium {
 #backlight,
 #network,
 #pulseaudio,
-#custom-spotify,
+#custom-media,
 #mode {
   padding: 0 5px;
   margin: 0 4px;
@@ -126,8 +127,7 @@ label:focus {
   border-bottom: 3px solid #ff5555;
 }
 
-#custom-spotify {
-  /* Nothing special */
+#custom-media {
   padding-right: 50px;
 }
 

@@ -52,5 +52,5 @@ ln -sri .config/sway/config ~/.config/sway
 mkdir -p ~/.config/waybar/modules
 ln -sri .config/waybar/config ~/.config/waybar/config
 ln -sri .config/waybar/style.css ~/.config/waybar/style.css
-ln -sri .config/waybar/modules/spotify.sh ~/.config/waybar/modules/spotify.sh
+ln -sri .config/waybar/modules/mediaplayer.py ~/.config/waybar/modules/mediaplayer.py
 

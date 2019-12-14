@@ -2,7 +2,7 @@
   "layer": "bottom",
   "height": 25,
   "modules-left": ["sway/workspaces", "sway/mode"],
-  "modules-center": ["custom/spotify"],
+  "modules-center": ["custom/media"],
   "modules-right": [
     "backlight",
     "pulseaudio",
@@ -68,7 +68,7 @@
     "format-wifi": "  {essid} ({signalStrength}%)",
     "format-ethernet": " {ifname}: {ipaddr}/{cidr}",
     "format-linked": " {ifname} (No IP)",
-    "format-disconnected": "",
+    "format-disconnected": "Disconnected",
     "format-alt": "{ifname}: {ipaddr}/{cidr}"
   },
   "pulseaudio": {
@@ -92,13 +92,16 @@
     "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
     "smooth-scrolling-threshold": 3
   },
-
-  "custom/spotify": {
-    "interval": 1,
+  "custom/media": {
+    "format": "{}",
     "return-type": "json",
-    "exec": "~/.config/waybar/modules/spotify.sh",
-    "exec-if": "pgrep -x spotify",
+    "max-length": 40,
+    "format-icons": {
+      "spotify": "",
+      "default": "🎜"
+    },
     "escape": true,
-    "on-click": "playerctl play-pause"
+    "on-click": "playerctl play-pause",
+    "exec": "~/.config/waybar/modules/mediaplayer.py --player spotify 2> /dev/null"
   }
 }
