@@ -28,7 +28,7 @@ exec swayidle -w \
 input "2:14:ETPS/2_Elantech_Touchpad" tap enabled
 
 # Keyboard config
-input "1:1:AT_Translated_Set_2_keyboard" {
+input "type:keyboard" {
     xkb_layout us,ir
     xkb_options grp:switch,grp_led:scroll,grp:alt_shift_toggle
 }
