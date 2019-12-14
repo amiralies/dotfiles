@@ -142,8 +142,7 @@ bindsym Control+Print exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | selec
 bindsym Shift+Print exec grim -g "$(slurp)" ~/Pictures/Screenshots/$(date +%s).png
 bindsym Control+Shift+Print exec grim -g "$(slurp)" - | wl-copy
 bindsym Mod1+Print exec grim -g "$(sh ~/bin/get-window-geometry)" ~/Pictures/Screenshots/$(date +%s).png
-bindsym Mod1+Control+Print exec grim -g "$(sh ~/bin/get-window-geometry)" - | wl-copy
-
+bindsym $mod+Control+w+Print exec grim -g "$(sh ~/bin/get-window-geometry)" - | wl-copy
 
 # Resizing containers
 mode "resize" {
