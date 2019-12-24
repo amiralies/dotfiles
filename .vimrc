@@ -48,6 +48,7 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 let mapleader=","
 
 "default indent
+set ts=4
 set sts=2
 set sw=2
 
