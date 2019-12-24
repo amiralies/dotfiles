@@ -229,4 +229,6 @@ exec --no-startup-id libinput-gestures-setup start
 # Status Bar
 bar swaybar_command waybar
 
+for_window [class="st-256color"] opacity 0.9
+
 include /etc/sway/config.d/*
