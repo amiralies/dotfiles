@@ -71,6 +71,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  autojump
 )
 
 source $ZSH/oh-my-zsh.sh
