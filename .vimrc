@@ -2,16 +2,16 @@ set nocompatible
 
 call plug#begin()
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'} Plug 'dracula/vim'
 Plug 'dracula/vim'
 Plug 'sickill/vim-monokai'
+Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-sleuth'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdtree'
 Plug 'pangloss/vim-javascript'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-repeat'
 Plug 'junegunn/fzf.vim'
 Plug 'derekwyatt/vim-scala'
@@ -152,6 +152,8 @@ let g:javascript_plugin_flow = 1
 " fomratter
 vmap <silent> <leader>f :call CocAction('formatSelected', visualmode())<CR>
 nmap <silent> <leader>f :call CocAction('format')<CR>
+vmap <silent> = :call CocAction('formatSelected', visualmode())<CR>
+nmap <silent> = :call CocAction('format')<CR>
 
 " jsonc comments
 autocmd FileType json syntax match Comment +\/\/.\+$+
