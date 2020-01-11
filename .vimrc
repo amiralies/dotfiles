@@ -2,7 +2,7 @@ set nocompatible
 
 call plug#begin()
 
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'} Plug 'dracula/vim'
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'dracula/vim'
 Plug 'sickill/vim-monokai'
 Plug 'tpope/vim-commentary'
