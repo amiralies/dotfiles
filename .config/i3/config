@@ -204,7 +204,7 @@ smart_borders on
 exec --no-startup-id libinput-gestures-setup start
 
 # i3lock
-exec --no-startup-id xautolock -time 3 -locker 'i3lock-fancy-dualmonitor'
+exec --no-startup-id xautolock -time 3 -locker 'i3lock -c 000000'
 bindsym --release $mod+o exec xautolock -locknow
 
 # Multihead
