@@ -72,6 +72,8 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 plugins=(
   git
   autojump
+  mix
+  sbt
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -135,6 +137,7 @@ alias c=clear
 alias dic=sdcv
 alias turnoff="systemctl poweroff"
 alias t=touch
+alias cpumhz="cat /proc/cpuinfo | ag mhz"
 
 # Vi mode
 set -o vi
@@ -189,6 +192,9 @@ source /usr/share/fzf/key-bindings.zsh
 
 # SSH agent
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
+# Persist IEX / ERL
+export ERL_AFLAGS="-kernel shell_history enabled"
 
 #FINAL_TIME_SIEVER=$(($(date +%s%N)/1000000))
 #echo $(($FINAL_TIME_SIEVER - $INIT_TIME_SIEVER))
