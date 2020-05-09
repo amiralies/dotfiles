@@ -123,7 +123,7 @@ alias emu=~/Android/Sdk/emulator/emulator
 
 # aliases
 alias azizam=sudo
-alias v=vim
+alias v=nv
 alias nv=nvim
 alias v8=~/.jsvu/v8
 alias open=xdg-open
