@@ -10,9 +10,9 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term st
+set $term alacritty
 # Your preferred application launcher
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu bemenu-run -i -p '~' --fn 'Meslo LG L 10' --tf '#ff4757' --nf '#ffffff' --nb '#222222' --tb '#222222' --sb '#222222'  --scb '#222222' --fb '#222222' --hb '#222222' --hf '#ff4757' | xargs swaymsg exec --
 
 # Output configuration
 output * bg ~/Pictures/Wallpapers/sway-current.jpg fill
@@ -51,8 +51,9 @@ bindsym $mod+Return exec $term
 # Kill focused window
 bindsym $mod+Shift+q kill
 
-# Start your launcher
+# Start launcher
 bindsym $mod+d exec $menu
+bindsym $mod+grave exec $menu
 
 # Reload the configuration file
 bindsym $mod+Shift+c reload
