@@ -7,6 +7,7 @@ Plug 'dracula/vim'
 Plug 'sickill/vim-monokai'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-sensible'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdtree'
 Plug 'pangloss/vim-javascript'
@@ -32,6 +33,9 @@ Plug 'amiralies/vim-textobj-elixir'
 Plug 'jparise/vim-graphql'
 Plug 'reasonml-editor/vim-reason-plus'
 Plug 'ElmCast/elm-vim'
+Plug 'RRethy/vim-illuminate'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
+Plug 'ocaml/vim-ocaml'
 
 call plug#end()
 
@@ -178,4 +182,11 @@ autocmd FileType help,nerdtree LeadingSpaceToggle
 
 set encoding=UTF-8
 set hlsearch
+
+let g:Illuminate_delay = 0
+let g:Illuminate_ftblacklist = ['nerdtree']
+
+if has('nvim')
+  set guicursor=n:blinkon1
+endif
 
